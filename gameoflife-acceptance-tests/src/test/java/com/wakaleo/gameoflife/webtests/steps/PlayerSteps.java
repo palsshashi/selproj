@@ -33,7 +33,7 @@ public class PlayerSteps {
         currentPage().shouldContainText(expectedText);
     }
 
-    @Step
+    /*@Step
     public void should_see_grid(String[][] expectedGrid) {
         assertThat(onShowGridPage().getDisplayedGrid()).isEqualTo(expectedGrid);
     }
@@ -52,7 +52,7 @@ public class PlayerSteps {
     public void clicks_on_home() {
         currentPage().clickOnHome();
     }
-
+*/
     private HomePage onHomePage() {
         return pages.currentPageAt(HomePage.class);
     }
