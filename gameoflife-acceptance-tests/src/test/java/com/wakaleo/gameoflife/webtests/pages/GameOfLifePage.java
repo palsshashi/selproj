@@ -4,6 +4,7 @@ import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
 
 @DefaultUrl("http://localhost:9090/gameoflife")
@@ -13,7 +14,10 @@ public class GameOfLifePage extends PageObject {
     WebElement homeLink;
 
     public GameOfLifePage(WebDriver driver) {
-        super(driver);
+        //super(driver);
+    	System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/chromedriver.exe");
+    	
+    	driver=new ChromeDriver();
     }
 
     public void clickOnHome() {

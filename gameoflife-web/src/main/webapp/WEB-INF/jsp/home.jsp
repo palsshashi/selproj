@@ -93,7 +93,7 @@
 
 <c:url value="/game/new" var="newGamePage"/>
 <div class="action-button">
-    <a href="${newGamePage}">New GamZ</a>
+    <a href="${newGamePage}">New GamZe</a>
 </div>
 
 <%
