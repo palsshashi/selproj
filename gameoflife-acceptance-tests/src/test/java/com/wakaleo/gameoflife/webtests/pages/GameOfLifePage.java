@@ -14,10 +14,10 @@ public class GameOfLifePage extends PageObject {
     WebElement homeLink;
 
     public GameOfLifePage(WebDriver driver) {
-        //super(driver);
-    	System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/chromedriver.exe");
+        super(driver);
+    	/*System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/chromedriver.exe");
     	
-    	driver=new ChromeDriver();
+    	driver=new ChromeDriver();*/
     }
 
     public void clickOnHome() {
