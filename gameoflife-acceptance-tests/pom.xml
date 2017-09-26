@@ -12,7 +12,7 @@
         <jetty.port>9090</jetty.port>
         <jetty.stop.port>9999</jetty.stop.port>
         <webdriver.base.url>http://localhost:${jetty.port}</webdriver.base.url>
-        <webdriver.driver>firefox</webdriver.driver>
+        <webdriver.driver>chrome</webdriver.driver>
         <thucydides.version>0.9.268</thucydides.version>
     </properties>
     <dependencies>
@@ -86,9 +86,10 @@
                             <goal>verify</goal>
                         </goals>
                         <configuration>
-                            <argLine>-Xmx512m</argLine>
+                            <!--  <argLine>-Xmx512m</argLine>
                             <parallel>classes</parallel>
-                            <threadCount>4</threadCount>
+                            <threadCount>2</threadCount>-->
+                            <testFailureIgnore>true</testFailureIgnore>
                             <includes>
                                 <include>**/When*.java</include>
                                 <include>**/*Test.java</include>
@@ -122,7 +123,7 @@
             <id>development</id>
             <properties>
                 <webdriver.base.url>http://gameoflife:${jetty.port}</webdriver.base.url>
-                <webdriver.driver>firefox</webdriver.driver>
+                <webdriver.driver>chrome</webdriver.driver>
             </properties>
         </profile>
         <profile>
